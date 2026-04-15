@@ -1,3 +1,6 @@
+"use client";
+
+import Image from "next/image";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 export function About() {
@@ -19,6 +22,15 @@ export function About() {
                 <br />
                 <span className="italic font-normal">metrics.</span>
               </h2>
+
+              <div className="mt-8 relative w-48 aspect-[3/4] overflow-hidden border border-neutral-200 dark:border-neutral-800">
+                <Image
+                  src="/images/plabon1.jpg"
+                  alt="Plabon Shekh"
+                  fill
+                  className="object-cover object-[50%_10%] grayscale"
+                />
+              </div>
             </AnimatedSection>
           </div>
 

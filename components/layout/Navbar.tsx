@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { cn } from "@/lib/utils";
@@ -78,40 +77,37 @@ export function Navbar() {
         </div>
       </nav>
 
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.15 }}
-            className="md:hidden bg-white dark:bg-neutral-950 border-b border-neutral-200 dark:border-neutral-800"
-          >
-            <ul className="flex flex-col px-6 py-5 gap-5">
-              {navLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="text-base font-medium text-neutral-700 dark:text-neutral-300"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-              <li>
+      <div
+        className={cn(
+          "md:hidden overflow-hidden transition-all duration-150 ease-out",
+          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        )}
+      >
+        <div className="bg-white dark:bg-neutral-950 border-b border-neutral-200 dark:border-neutral-800">
+          <ul className="flex flex-col px-6 py-5 gap-5">
+            {navLinks.map((link) => (
+              <li key={link.label}>
                 <Link
-                  href={personalInfo.resumeUrl}
-                  download
-                  className="inline-flex text-sm font-semibold border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 px-4 py-1.5 rounded-full"
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="text-base font-medium text-neutral-700 dark:text-neutral-300"
                 >
-                  Resume
+                  {link.label}
                 </Link>
               </li>
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            ))}
+            <li>
+              <Link
+                href={personalInfo.resumeUrl}
+                download
+                className="inline-flex text-sm font-semibold border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 px-4 py-1.5 rounded-full"
+              >
+                Resume
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
   );
 }

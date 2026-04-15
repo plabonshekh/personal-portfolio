@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { experience } from "@/data/experience";
 
@@ -20,12 +19,9 @@ export function Experience() {
 
         <div className="divide-y divide-neutral-100 dark:divide-neutral-900">
           {experience.map((item, i) => (
-            <motion.div
+            <AnimatedSection
               key={`${item.company}-${item.role}`}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.4, delay: i * 0.06 }}
+              delay={i * 0.06}
               className="py-10"
             >
               <div className="flex flex-col gap-6 md:flex-row">
@@ -61,7 +57,7 @@ export function Experience() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </AnimatedSection>
           ))}
         </div>
       </div>

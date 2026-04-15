@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 import { personalInfo } from "@/data/personalInfo";
 
@@ -10,56 +10,47 @@ export function Hero() {
     <section className="relative min-h-screen flex flex-col justify-center pt-24 pb-16 overflow-hidden">
       <div className="section-num">01</div>
       <div className="relative z-10 mx-auto max-w-6xl px-6 w-full">
-        <div className="max-w-4xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="flex flex-col justify-center">
           {/* Overline */}
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
+          <p
+            style={{ animation: "fadeInUp 0.4s ease-out 0.1s both" }}
             className="mb-8 text-xs font-semibold uppercase tracking-[0.3em] text-neutral-400 dark:text-neutral-500"
           >
             Senior Product Manager · GovTech · AI · SaaS
-          </motion.p>
+          </p>
 
           {/* Main headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="font-display text-5xl font-black leading-[1.05] tracking-tight text-neutral-900 dark:text-white md:text-7xl lg:text-8xl mb-8"
+          <h1
+            style={{ animation: "fadeInUp 0.6s ease-out 0.2s both" }}
+            className="font-display text-5xl font-black leading-[1.05] tracking-tight text-neutral-900 dark:text-white md:text-6xl lg:text-7xl mb-8"
           >
             I build digital
             <br />
             products that
             <br />
             <span className="italic font-normal">operate at scale.</span>
-          </motion.h1>
+          </h1>
 
           {/* Divider */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+          <div
+            style={{ animation: "expandX 0.5s ease-out 0.5s both" }}
             className="origin-left h-px w-24 bg-neutral-300 dark:bg-neutral-700 mb-8"
           />
 
           {/* Bio */}
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+          <p
+            style={{ animation: "fadeInUp 0.5s ease-out 0.4s both" }}
             className="max-w-xl text-lg leading-relaxed text-neutral-500 dark:text-neutral-400 mb-10"
           >
             8+ years leading AI platforms, GovTech systems, and enterprise SaaS —
             from 0→1 launches to 1M+ user deployments at Penta Global, ArchiConnect,
             and beyond.
-          </motion.p>
+          </p>
 
           {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.5 }}
+          <div
+            style={{ animation: "fadeInUp 0.4s ease-out 0.5s both" }}
             className="flex flex-wrap items-center gap-4"
           >
             <Link
@@ -76,20 +67,36 @@ export function Hero() {
             >
               Download Resume
             </Link>
-          </motion.div>
+          </div>
+        </div>
+
+        {/* Profile photo */}
+        <div
+          style={{ animation: "scaleIn 0.7s ease-out 0.4s both" }}
+          className="hidden lg:flex justify-center"
+        >
+          <div className="relative w-72 xl:w-80 aspect-[3/4] overflow-hidden border border-neutral-200 dark:border-neutral-800">
+            <Image
+              src="/images/plabon.jpeg"
+              alt="Plabon Shekh — Senior Product Manager"
+              fill
+              className="object-cover object-center grayscale"
+              priority
+            />
+          </div>
+        </div>
+
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
+      <div
+        style={{ animation: "fadeIn 0.4s ease-out 1.2s both" }}
         className="absolute bottom-10 left-6 md:left-12 flex items-center gap-3 text-xs tracking-widest uppercase text-neutral-300 dark:text-neutral-700"
       >
         <div className="h-px w-6 bg-neutral-300 dark:bg-neutral-700" />
         Scroll
-      </motion.div>
+      </div>
     </section>
   );
 }

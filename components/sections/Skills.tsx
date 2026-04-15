@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { skills } from "@/data/skills";
 
@@ -22,12 +21,9 @@ export function Skills() {
 
         <div className="grid grid-cols-1 gap-0 divide-y divide-neutral-200 dark:divide-neutral-800 md:grid-cols-2 md:divide-y-0 md:gap-10">
           {skills.map((group, i) => (
-            <motion.div
+            <AnimatedSection
               key={group.category}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
+              delay={i * 0.08}
               className="py-8 md:py-0"
             >
               <p className="text-xs font-bold uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-4">
@@ -43,7 +39,7 @@ export function Skills() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </AnimatedSection>
           ))}
         </div>
       </div>
