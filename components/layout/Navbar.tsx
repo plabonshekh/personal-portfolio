@@ -57,13 +57,14 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
-          <Link
+          <a
             href={personalInfo.resumeUrl}
             target="_blank"
+            rel="noopener noreferrer"
             className="text-sm font-semibold border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-neutral-900 px-4 py-1.5 rounded-full transition-all"
           >
             Resume
-          </Link>
+          </a>
         </div>
 
         <div className="md:hidden flex items-center gap-3">
@@ -98,13 +99,14 @@ export function Navbar() {
               </li>
             ))}
             <li>
-              <Link
+              <a
                 href={personalInfo.resumeUrl}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex text-sm font-semibold border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 px-4 py-1.5 rounded-full"
               >
                 Resume
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
