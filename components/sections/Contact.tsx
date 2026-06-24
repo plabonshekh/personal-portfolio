@@ -19,7 +19,7 @@ const links = [
   {
     label: "Resume",
     value: "Download PDF →",
-    href: personalInfo.resumeUrl,
+    href: "/resume.pdf",
     external: false,
     download: "Plabon_Shekh_Product_Manager",
   },
