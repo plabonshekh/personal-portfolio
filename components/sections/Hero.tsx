@@ -8,7 +8,6 @@ import { personalInfo } from "@/data/personalInfo";
 export function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center pt-24 pb-16 overflow-hidden">
-      <div className="section-num">01</div>
       <div className="relative z-10 mx-auto max-w-6xl px-6 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div className="flex flex-col justify-center">
@@ -17,7 +16,7 @@ export function Hero() {
             style={{ animation: "fadeInUp 0.4s ease-out 0.1s both" }}
             className="mb-8 text-xs font-semibold uppercase tracking-[0.3em] text-neutral-400 dark:text-neutral-500"
           >
-            Senior Product Manager · GovTech · AI · SaaS
+            Engineer → Product Manager · GovTech · AI · SaaS
           </p>
 
           {/* Main headline */}
@@ -43,9 +42,10 @@ export function Hero() {
             style={{ animation: "fadeInUp 0.5s ease-out 0.4s both" }}
             className="max-w-xl text-lg leading-relaxed text-neutral-500 dark:text-neutral-400 mb-10"
           >
-            8+ years leading AI platforms, GovTech systems, and enterprise SaaS —
-            from 0→1 launches to 1M+ user deployments at Penta Global, ArchiConnect,
-            and beyond.
+            I started as a software engineer. Eight years later, I lead products that
+            millions depend on — across AI SaaS, GovTech, and B2B platforms.
+            Engineering instinct plus product thinking: I read the diff, prototype
+            the idea, and still close the sprint.
           </p>
 
           {/* CTAs */}

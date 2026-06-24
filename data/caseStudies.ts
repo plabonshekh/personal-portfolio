@@ -63,7 +63,7 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         heading: "Research & Diagnosis",
-        body: "I conducted 50+ structured customer interviews and ran deep funnel analysis to identify where and why users were dropping off. The core issues: a friction-heavy onboarding flow, misaligned pricing tiers, and a discovery experience that didn't surface relevant suppliers fast enough. I synthesized this into a prioritized experimentation roadmap.",
+        body: "I conducted 100+ structured customer interviews and ran deep funnel analysis to identify where and why users were dropping off. The core issues: a friction-heavy onboarding flow, misaligned pricing tiers, and a discovery experience that didn't surface relevant suppliers fast enough. I synthesized this into a prioritized experimentation roadmap.",
         type: "text",
       },
       {

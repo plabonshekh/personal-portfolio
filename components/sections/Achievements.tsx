@@ -12,16 +12,17 @@ const typeLabel = {
 
 export function Achievements() {
   return (
-    <section className="relative py-24 md:py-36 border-t border-neutral-100 dark:border-neutral-900 overflow-hidden">
-      <div className="section-num">07</div>
+    <section className="relative py-24 md:py-36 overflow-hidden">
+      <div className="section-num">05</div>
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         <AnimatedSection className="mb-16">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-400 dark:text-neutral-500 mb-3">
-            Recognition
-          </p>
-          <h2 className="font-display text-4xl font-black text-neutral-900 dark:text-white md:text-5xl">
-            Awards &amp; achievements
-          </h2>
+          <div className="flex items-center gap-4">
+            <span className="text-xs font-mono text-neutral-400 dark:text-neutral-600">(05)</span>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-neutral-500 dark:text-neutral-400">
+              Recognition
+            </p>
+            <div className="flex-1 h-px bg-neutral-200 dark:bg-neutral-800" />
+          </div>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

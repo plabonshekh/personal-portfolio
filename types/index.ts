@@ -34,6 +34,7 @@ export interface ExperienceItem {
   description: string[];
   skills: string[];
   logo?: string;
+  metrics?: { value: string; label: string }[];
 }
 
 export interface SkillGroup {

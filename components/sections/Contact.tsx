@@ -1,111 +1,97 @@
 "use client";
 
-import { useState } from "react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { personalInfo } from "@/data/personalInfo";
 
+const links = [
+  {
+    label: "Email",
+    value: "plabon.shekh7@gmail.com",
+    href: `mailto:${personalInfo.email}`,
+    external: false,
+  },
+  {
+    label: "LinkedIn",
+    value: "linkedin.com/in/plabonshekh",
+    href: personalInfo.linkedin,
+    external: true,
+  },
+  {
+    label: "Resume",
+    value: "Download PDF →",
+    href: personalInfo.resumeUrl,
+    external: false,
+    download: true,
+  },
+];
+
 export function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = encodeURIComponent(`Portfolio inquiry from ${form.name}`);
-    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
-    window.open(`mailto:${personalInfo.email}?subject=${subject}&body=${body}`);
-  };
-
-  const inputClass =
-    "w-full border-b border-neutral-200 dark:border-neutral-800 bg-transparent py-3 text-neutral-900 dark:text-white placeholder-neutral-300 dark:placeholder-neutral-700 focus:outline-none focus:border-neutral-900 dark:focus:border-white transition-colors text-sm";
-
   return (
-    <section id="contact" className="relative py-24 md:py-36 border-t border-neutral-100 dark:border-neutral-900 overflow-hidden">
-      <div className="section-num">08</div>
+    <section id="contact" className="relative bg-neutral-950 overflow-hidden">
+      <div className="section-num-dark">08</div>
+      {/* Top border */}
+      <div className="h-px bg-neutral-800" />
+
       <div className="relative z-10 mx-auto max-w-6xl px-6">
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
-          {/* Left */}
-          <div className="lg:col-span-5">
-            <AnimatedSection>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-400 dark:text-neutral-500 mb-3">
-                Contact
-              </p>
-              <h2 className="font-display text-4xl font-black text-neutral-900 dark:text-white md:text-5xl leading-tight mb-8">
-                Let&apos;s
-                <br />
-                <span className="italic font-normal">talk.</span>
-              </h2>
 
-              <div className="space-y-4 text-sm text-neutral-500 dark:text-neutral-400">
-                <p>
-                  Open to senior PM and Product Lead roles in GovTech, AI/ML, or enterprise SaaS — globally mobile or remote.
-                </p>
-                <a
-                  href={`mailto:${personalInfo.email}`}
-                  className="block font-semibold text-neutral-900 dark:text-white hover:underline underline-offset-4"
-                >
-                  {personalInfo.email} ↗
-                </a>
-                <a
-                  href={personalInfo.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block font-semibold text-neutral-900 dark:text-white hover:underline underline-offset-4"
-                >
-                  linkedin.com/in/plabonshekh ↗
-                </a>
-              </div>
-
-              <a
-                href={personalInfo.resumeUrl}
-                download
-                className="mt-8 inline-flex items-center gap-2 border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-neutral-900 px-6 py-3 rounded-full text-sm font-semibold transition-all"
-              >
-                Download Resume
-              </a>
-            </AnimatedSection>
+        {/* Section label */}
+        <AnimatedSection className="pt-16 mb-20">
+          <div className="flex items-center gap-4">
+            <span className="text-xs font-mono text-neutral-600">(08)</span>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-neutral-500">
+              Contact
+            </p>
+            <div className="flex-1 h-px bg-neutral-800" />
           </div>
+        </AnimatedSection>
 
-          {/* Right — form */}
-          <AnimatedSection className="lg:col-span-7" delay={0.1}>
-            <form onSubmit={handleSubmit} className="space-y-8">
-              <div>
-                <input
-                  type="text"
-                  required
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  placeholder="Your Name"
-                  className={inputClass}
-                />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  required
-                  value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  placeholder="Your Email"
-                  className={inputClass}
-                />
-              </div>
-              <div>
-                <textarea
-                  required
-                  rows={4}
-                  value={form.message}
-                  onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  placeholder="Your Message"
-                  className={`${inputClass} resize-none`}
-                />
-              </div>
-              <button
-                type="submit"
-                className="bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-8 py-3.5 rounded-full text-sm font-semibold hover:opacity-80 transition-opacity"
-              >
-                Send Message →
-              </button>
-            </form>
+        {/* Main headline */}
+        <AnimatedSection delay={0.05}>
+          <h2 className="font-display text-6xl font-black text-white md:text-8xl lg:text-[9rem] leading-none tracking-tight mb-4">
+            Let&apos;s build
+          </h2>
+        </AnimatedSection>
+        <AnimatedSection delay={0.08}>
+          <h2 className="font-display text-6xl font-black md:text-8xl lg:text-[9rem] leading-none tracking-tight mb-16">
+            <span className="italic font-normal text-neutral-500">something real.</span>
+          </h2>
+        </AnimatedSection>
+
+        {/* Domains */}
+        <AnimatedSection delay={0.12} className="mb-20">
+          <p className="text-xs font-mono text-neutral-600 tracking-widest">
+            GovTech · AI/ML · Enterprise SaaS · Remote or Global
+          </p>
+        </AnimatedSection>
+
+        {/* Divider */}
+        <div className="h-px bg-neutral-800 mb-0" />
+
+        {/* Contact links — full-width rows */}
+        {links.map((link, i) => (
+          <AnimatedSection key={link.label} delay={0.05 * i}>
+            <a
+              href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noopener noreferrer" : undefined}
+              download={link.download || undefined}
+              className="group flex items-center justify-between py-7 border-b border-neutral-800 hover:pl-4 transition-all duration-300"
+            >
+              <span className="text-xs font-mono text-neutral-600 uppercase tracking-widest w-24 shrink-0">
+                {link.label}
+              </span>
+              <span className="flex-1 text-lg md:text-2xl font-semibold text-neutral-300 group-hover:text-white transition-colors">
+                {link.value}
+              </span>
+              <span className="text-neutral-700 group-hover:text-white group-hover:translate-x-1 transition-all text-xl">
+                ↗
+              </span>
+            </a>
           </AnimatedSection>
-        </div>
+        ))}
+
+        {/* Bottom spacer */}
+        <div className="pb-24" />
       </div>
     </section>
   );

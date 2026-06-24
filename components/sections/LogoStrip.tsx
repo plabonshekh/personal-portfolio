@@ -1,29 +1,41 @@
 "use client";
 
-const companies = [
-  "Penta Global Ltd.",
-  "ArchiConnect",
-  "Rokkhi IT Solutions",
-  "Plan International",
-  "UNICEF Bangladesh",
+const keywords = [
+  "GovTech",
+  "AI / ML",
+  "B2B SaaS",
+  "Marketplace",
+  "0 → 1",
+  "CDR Analytics",
+  "User Research",
+  "Go-to-Market",
+  "Product Strategy",
+  "Agile",
+  "Enterprise SaaS",
+  "LLM Tooling",
+  "Data Pipelines",
+  "Social Impact",
 ];
 
 export function LogoStrip() {
+  const items = [...keywords, ...keywords];
+
   return (
-    <section className="border-y border-neutral-100 dark:border-neutral-900 py-10">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14">
-          {companies.map((name, i) => (
-            <span
-              key={name}
-              style={{ animation: `fadeIn 0.3s ease-out ${i * 0.06}s both` }}
-              className="text-sm font-semibold uppercase tracking-widest text-neutral-300 dark:text-neutral-700"
-            >
-              {name}
-            </span>
-          ))}
-        </div>
+    <div className="border-y border-neutral-100 dark:border-neutral-900 py-5 overflow-hidden">
+      <div
+        className="flex whitespace-nowrap"
+        style={{ animation: "ticker 22s linear infinite" }}
+      >
+        {items.map((kw, i) => (
+          <span
+            key={i}
+            className="inline-flex items-center gap-6 text-xs font-bold uppercase tracking-[0.25em] text-neutral-800 dark:text-neutral-300 px-6"
+          >
+            {kw}
+            <span className="text-neutral-400 dark:text-neutral-600">—</span>
+          </span>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }

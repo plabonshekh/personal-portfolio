@@ -3,8 +3,8 @@ import { PersonalInfo } from "@/types";
 export const personalInfo: PersonalInfo = {
   name: "Plabon Shekh",
   title: "Senior Product Manager",
-  tagline: "Product & Technology Leader with 8+ years of experience leading large-scale digital platforms across GovTech, AI, and enterprise SaaS — turning complex problems into measurable impact.",
-  bio: "I'm a Product & Technology Leader with 8+ years of experience delivering national-scale systems, AI-powered platforms, and enterprise SaaS products. From launching Bangladesh's Election Management System (1M+ downloads in 30 days) to building Voxcruit with 94% AI matching accuracy, I lead with strategy, execute with precision, and always keep measurable outcomes at the center.",
+  tagline: "Software engineer turned Senior Product Manager — 8+ years building products from 0→1 across AI SaaS, GovTech, and B2B platforms. I read code, prototype with LLMs, and ship measurable improvements every sprint.",
+  bio: "I started as a software engineer. Now I lead products that millions of people depend on. Eight years bridging engineering instinct with product strategy — across AI SaaS, GovTech, and B2B platforms. I can read a diff, prototype with LLMs, and still close the sprint on time.",
   email: "plabon.shekh7@gmail.com",
   linkedin: "https://www.linkedin.com/in/plabonshekh/",
   resumeUrl: "/resume.pdf",
