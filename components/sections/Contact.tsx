@@ -21,7 +21,7 @@ const links = [
     value: "Download PDF →",
     href: personalInfo.resumeUrl,
     external: false,
-    download: true,
+    download: "Plabon_Shekh_Product_Manager",
   },
 ];
 
