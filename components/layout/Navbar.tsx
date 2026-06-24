@@ -59,8 +59,7 @@ export function Navbar() {
           <ThemeToggle />
           <a
             href={personalInfo.resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            download="Plabon_Shekh_Product_Manager"
             className="text-sm font-semibold border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-neutral-900 px-4 py-1.5 rounded-full transition-all"
           >
             Resume

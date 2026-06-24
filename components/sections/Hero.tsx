@@ -62,8 +62,7 @@ export function Hero() {
             </Link>
             <a
               href={personalInfo.resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              download="Plabon_Shekh_Product_Manager"
               className="inline-flex items-center gap-2 border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 px-7 py-3.5 rounded-full text-sm font-semibold hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
             >
               Download Resume

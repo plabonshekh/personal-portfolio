@@ -7,6 +7,6 @@ export const personalInfo: PersonalInfo = {
   bio: "I started as a software engineer. Now I lead products that millions of people depend on. Eight years bridging engineering instinct with product strategy — across AI SaaS, GovTech, and B2B platforms. I can read a diff, prototype with LLMs, and still close the sprint on time.",
   email: "plabon.shekh7@gmail.com",
   linkedin: "https://www.linkedin.com/in/plabonshekh/",
-  resumeUrl: "/resume",
+  resumeUrl: "/resume.pdf",
   avatarUrl: "/images/avatar.jpg",
 };
