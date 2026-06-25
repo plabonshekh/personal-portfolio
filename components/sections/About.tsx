@@ -64,11 +64,17 @@ export function About() {
                 <strong className="text-white">B2B SaaS marketplaces</strong>, and a
                 co-founded startup — each one a different kind of hard.
               </p>
-              <p>
-                BSc Computer Science, University of Dhaka. BBA Entrepreneurship,
-                Daffodil International University. BASIS National ICT Award.
-                ICT Division Entrepreneur of the Year, 2019.
-              </p>
+              <div className="space-y-3 text-base">
+                <div>
+                  <span className="text-neutral-400 uppercase tracking-widest text-xs font-semibold">Education —</span>
+                  <p className="mt-1 text-neutral-400">BSc Computer Science, University of Dhaka.</p>
+                  <p className="text-neutral-400">BBA Entrepreneurship, Daffodil International University.</p>
+                </div>
+                <div>
+                  <span className="text-neutral-400 uppercase tracking-widest text-xs font-semibold">Awards —</span>
+                  <p className="mt-1 text-neutral-400">BASIS National ICT Award · ICT Division Entrepreneur of the Year, 2019.</p>
+                </div>
+              </div>
               <p className="text-base text-neutral-500">
                 <span className="text-neutral-400 uppercase tracking-widest text-xs font-semibold">Certifications —</span>{" "}
                 Digital Product Management · Product Management Career Program · Google Data Analytics · Agile Methodology for Startups · Python Essentials for Data Science · AI Generalist
