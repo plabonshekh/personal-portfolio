@@ -2,10 +2,12 @@ export interface Achievement {
   title: string;
   issuer: string;
   year: string;
-  type: "champion" | "runner-up" | "award" | "grant";
+  type: "champion" | "runner-up" | "award" | "grant" | "education";
 }
 
 export const achievements: Achievement[] = [
+  { title: "BSc Computer Science", issuer: "University of Dhaka", year: "2017", type: "education" },
+  { title: "BBA Entrepreneurship", issuer: "Daffodil International University", year: "2019", type: "education" },
   { title: "BASIS National ICT Award", issuer: "BASIS", year: "2019", type: "award" },
   { title: "Entrepreneur of the Year", issuer: "ICT Division", year: "2019", type: "award" },
   { title: "Startup Grant", issuer: "ICT Division, Bangladesh", year: "2019", type: "grant" },
