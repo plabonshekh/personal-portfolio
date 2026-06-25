@@ -49,7 +49,7 @@ export const experience: ExperienceItem[] = [
     location: "Dhaka, Bangladesh",
     description: [
       "Co-founded and ran an on-demand home services marketplace — owning product vision, fundraising, team building, and P&L all at once. Built during COVID, scaled through it.",
-      "Collaborated with investors and board members to secure $0.5M in venture capital funding — refining the business model, aligning strategic goals, and managing stakeholder communication throughout the process.",
+      "Collaborated with VC and angel investors to raise $0.5M in seed funding — refining the business model, aligning strategic goals, and managing stakeholder communication throughout the process.",
       "Enhanced platform engagement by 60% via UI/UX improvements; maintained NPS 60+ and achieved 30% higher customer acquisition.",
       "Implemented cost-saving measures resulting in $200K reduction in annual operating expenses, demonstrating strong operational and financial discipline.",
       "Delivered high-impact digital solutions for UNICEF Bangladesh, combining technical innovation with social impact objectives.",
@@ -57,7 +57,7 @@ export const experience: ExperienceItem[] = [
     skills: ["0→1", "Fundraising", "UI/UX", "Social Impact", "Startup", "P&L"],
     metrics: [
       { value: "60%", label: "Engagement growth" },
-      { value: "$0.5M", label: "VC funding secured" },
+      { value: "NPS 60+", label: "Customer satisfaction" },
       { value: "$200K", label: "Annual cost reduction" },
     ],
   },
