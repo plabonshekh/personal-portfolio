@@ -56,7 +56,7 @@ export const experience: ExperienceItem[] = [
     ],
     skills: ["0→1", "Fundraising", "UI/UX", "Social Impact", "Startup", "P&L"],
     metrics: [
-      { value: "60%", label: "Engagement growth" },
+      { value: "30%", label: "Customer acquisition growth" },
       { value: "NPS 60+", label: "Customer satisfaction" },
       { value: "$200K", label: "Annual cost reduction" },
     ],
